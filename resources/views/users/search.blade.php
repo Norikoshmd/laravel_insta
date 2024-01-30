@@ -43,11 +43,8 @@
                 <p class="lead text-muted text-center">No users found.</p>
             @endforelse
         </div>
-        @if($user->id !== Auth::user()->id)
             <div class="d-flex justify-content-center mt-2">
                 {{ $users->appends(request()->input())->links() }}
             </div>
-        @endif
-        
     </div>
 @endsection
